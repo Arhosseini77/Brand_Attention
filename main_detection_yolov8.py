@@ -1,0 +1,27 @@
+import argparse
+from logo_detection.yolov8_logo import yolov8_logo_detection
+
+
+def main():
+    parser = argparse.ArgumentParser(description="YOLOv8 Logo Detection")
+    parser.add_argument("--model", type=str, required=True, help="Path to YOLOv8 model")
+    parser.add_argument("--image", type=str, required=True, help="Path to input image")
+    parser.add_argument("--save-result", action="store_true", help="Save the result image with bounding boxes")
+
+    args = parser.parse_args()
+
+    model_path = args.model
+    image_path = args.image
+    save_result = args.save_result
+
+    # Perform logo detection and get bounding boxes
+    bboxes = yolov8_logo_detection(model_path, image_path, save_result)
+    print("bounding-boxes list :")
+    print(bboxes)
+
+    if save_result:
+        print(f"Bounding boxes saved to ./results/{image_path.split('/')[-1].split('.')[0]}_detected_logo.png")
+
+
+if __name__ == "__main__":
+    main()
