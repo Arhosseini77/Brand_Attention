@@ -2,9 +2,15 @@
 
 ## Installation
 
+Install Pytorch with :
 ````
 pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
 ````
+Install the requirements with:
+```shell
+pip install -r requirements.txt
+```
+
 
 ## Brand-Logo-Detection
 
@@ -22,4 +28,12 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 * If you want to visualize the detection results, include the --save-result flag in the command.
 
 ### Result
+
+
+|             Original Image                | Brand Logo Detection Result                          |
+| ------------------------------------------------------ |-----------------------------------------|
+|  ![Original Image](test_images/test.jpg) |![Brand Logo Detection](results/test_detected_logo.png)|
+
+
+
 
