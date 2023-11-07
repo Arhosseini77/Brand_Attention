@@ -39,6 +39,7 @@ def saliency_map_prediction(img_path , text_map_path , weight_path , output_path
     pic = toPIL(pred_saliency.squeeze())
     pred_saliency = postprocess_img(pic, img_path)
 
+
     cv2.imwrite(output_path + "/" + name + '_saliency_map.png', pred_saliency, [int(cv2.IMWRITE_JPEG_QUALITY), 100])  # save the result
     print('Finished')
 
