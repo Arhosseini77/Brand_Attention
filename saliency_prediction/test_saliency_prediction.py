@@ -13,7 +13,7 @@ def saliency_map_prediction(img_path , text_map_path , weight_path , output_path
 
     # load Model
     model = TranSalNet()
-    model.load_state_dict(torch.load(weight_path))
+    model.load_state_dict(torch.load(weight_path), strict=False)
     model = model.to(device)
     model.eval()
     print("Model loaded...")
@@ -54,12 +54,11 @@ def saliency_map_prediction_brand(img_path , text_map_path):
 
     # load Model
     model = TranSalNet()
-    model.load_state_dict(torch.load(weight_path))
+    model.load_state_dict(torch.load(weight_path) , strict=False)
     model = model.to(device)
     model.eval()
 
     img = preprocess_img(img_path)
-    name = img_path.split('/')[-1].split('.')[0]
     tmap = preprocess_img(text_map_path)
 
     img = np.array(img) / 255.

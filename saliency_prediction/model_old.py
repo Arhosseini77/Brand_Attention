@@ -1,5 +1,13 @@
+import os
 import torch
+import numpy as np
+import pandas as pd
+from torch.utils.data import Dataset, DataLoader
+from skimage import io, transform
+from PIL import Image
 import torch.nn as nn
+from torchvision import transforms, utils, models
+import torch.nn.functional as F
 import saliency_prediction.utils.resnet as resnet
 
 from saliency_prediction.utils.TransformerEncoder import Encoder
@@ -44,7 +52,7 @@ class TranSalNet(nn.Module):
     def forward(self, x , y):
         x = self.encoder(x)
         y = self.encoder(y)
-        x = self.decoder(x , y)
+        x = self.decoder(x , y , 0.75)
         return x
 
 
@@ -74,7 +82,6 @@ class _Decoder(nn.Module):
 
     def __init__(self):
         super(_Decoder, self).__init__()
-        self.alpha = nn.Parameter(torch.tensor(0.5))
         self.conv1 = nn.Conv2d(768, 768, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
         self.conv2 = nn.Conv2d(768, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
         self.conv3 = nn.Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -99,18 +106,27 @@ class _Decoder(nn.Module):
         self.upsample = nn.Upsample(scale_factor=2, mode='nearest')
         self.sigmoid = nn.Sigmoid()
 
-    def forward(self, x , y ):
+    def forward(self, x , y , a ):
         
         # UN PACK layers feature Map
         x3, x4, x5 = x
         y3 , y4 , y5 = y
-
+        # Fusion Visual and Text Features ( alpha and 1-alpha)
+        # x3 = a*x3 + (1-a)*y3 
+        # x4 = a*x4 + (1-a)*y4 
+        # x5 = a*x5 + (1-a)*y5 
+        
+        # ANOTHER Aproach
+#         x3 = x3 * y3
+#         x4 = x4 * y4
+#         x5 = x5 * y5
+        
         
         # DECODE
         x5 = self.TransEncoder1(x5)
         
         y5 = self.TransEncoder1(y5)
-        x5 = self.alpha*x5 + (1-self.alpha)*y5 
+        x5 = a*x5 + (1-a)*y5 
         
         x5 = self.conv1(x5)
         x5 = self.batchnorm1(x5)
@@ -120,7 +136,7 @@ class _Decoder(nn.Module):
         
         x4_a = self.TransEncoder2(x4)
         y4 = self.TransEncoder2(y4)
-        x4_a = self.alpha*x4_a + (1-self.alpha)*y4 
+        x4_a = a*x4_a + (1-a)*y4 
         
         x4 = x5 * x4_a
         x4 = self.relu(x4)
@@ -131,7 +147,7 @@ class _Decoder(nn.Module):
 
         x3_a = self.TransEncoder3(x3)
         y3 = self.TransEncoder3(y3)
-        x3_a = self.alpha*x3_a + (1-self.alpha)*y3
+        x3_a = a*x3_a + (1-a)*y3
         
         x3 = x4 * x3_a
         x3 = self.relu(x3)

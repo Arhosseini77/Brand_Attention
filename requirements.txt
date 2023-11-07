@@ -1,3 +1,5 @@
+scikit-image==0.21.0
+onnxruntime==1.13.1
 numpy==1.23.5
 tqdm
 opencv-contrib-python==4.8.0.76
