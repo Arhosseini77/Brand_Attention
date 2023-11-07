@@ -34,10 +34,10 @@ cfg3 = {
 }
 
 
-class TranSalNet(nn.Module):
+class ECT_SAL(nn.Module):
 
     def __init__(self):
-        super(TranSalNet, self).__init__()
+        super(ECT_SAL, self).__init__()
         self.encoder = _Encoder()
         self.decoder = _Decoder()
 

@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from torchvision import transforms, utils, models
 from saliency_prediction.utils.data_process import preprocess_img, postprocess_img
-from saliency_prediction.model import TranSalNet
+from saliency_prediction.model import ECT_SAL
 
 
 def saliency_map_prediction(img_path , text_map_path , weight_path , output_path):
@@ -12,7 +12,7 @@ def saliency_map_prediction(img_path , text_map_path , weight_path , output_path
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     # load Model
-    model = TranSalNet()
+    model = ECT_SAL()
     model.load_state_dict(torch.load(weight_path), strict=False)
     model = model.to(device)
     model.eval()
@@ -53,7 +53,7 @@ def saliency_map_prediction_brand(img_path , text_map_path):
     weight_path = "weights/Saliency_Map_Prediction.pth"
 
     # load Model
-    model = TranSalNet()
+    model = ECT_SAL()
     model.load_state_dict(torch.load(weight_path) , strict=False)
     model = model.to(device)
     model.eval()
