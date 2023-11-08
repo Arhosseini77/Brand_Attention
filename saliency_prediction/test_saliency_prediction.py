@@ -6,7 +6,7 @@ from saliency_prediction.utils.data_process import preprocess_img, postprocess_i
 from saliency_prediction.model import ECT_SAL
 
 
-def saliency_map_prediction(img_path , text_map_path , weight_path , output_path):
+def saliency_map_prediction(img_path , text_map_path , weight_path ):
 
     # Set Device
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -39,9 +39,7 @@ def saliency_map_prediction(img_path , text_map_path , weight_path , output_path
     pic = toPIL(pred_saliency.squeeze())
     pred_saliency = postprocess_img(pic, img_path)
 
-
-    cv2.imwrite(output_path + "/" + name + '_saliency_map.png', pred_saliency, [int(cv2.IMWRITE_JPEG_QUALITY), 100])  # save the result
-    print('Finished')
+    return pred_saliency
 
 
 

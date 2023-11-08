@@ -7,7 +7,7 @@ def calculate_sum_of_probabilities(saliency_map, bounding_boxes):
         return "none"
     else:
         # Apply threshold to saliency map
-        saliency_map[saliency_map < 100] = 0
+        saliency_map[saliency_map < 80] = 0
         # Normalize the saliency map
         normalized_map = saliency_map / np.sum(saliency_map)
 

@@ -11,8 +11,7 @@ Install the requirements with:
 pip install -r requirements.txt
 ```
 
-
-## Brand-Logo-Detection
+## Brand-Logo Detection
 
 ### Description
 
@@ -29,11 +28,17 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 
 ### Result
 
-
 |             Original Image                | Brand Logo Detection Result                          |
 | ------------------------------------------------------ |-----------------------------------------|
 |  ![Original Image](test_images/test.jpg) |![Brand Logo Detection](results/test_detected_logo.png)|
 
 
+## ECT-SAL
+
+### Description
+
+### Inference
 
 
+
+### Result
