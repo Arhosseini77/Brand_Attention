@@ -36,6 +36,6 @@ def brand_attention_calc(img_path , tmap_path ):
     pred_saliency = saliency_map_prediction_brand(img_path , tmap_path)
     bboxes = yolov8_logo_detection("weights/Logo_Detection_Yolov8.pt", img_path, save_result=False)
     score = calculate_sum_of_probabilities(pred_saliency, bboxes)
-    print(score)
+    return score
 
 
