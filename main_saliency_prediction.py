@@ -10,7 +10,7 @@ def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Saliency Map Prediction')
     parser.add_argument('--img_path', type=str, default='test_images/test.jpg', help='path to input image')
-    parser.add_argument('--weight_path', type=str, default='weights/Saliency_Map_Prediction_alpha.pth',
+    parser.add_argument('--weight_path', type=str, default='weights/ECT_SAL_256.pth',
                         help='path to weight file')
     parser.add_argument('--tmap', type=str, default='test_images/test_tmap.jpg', help='path to test tmap image')
     parser.add_argument('--output_path', type=str, default='results', help='path to output directory')

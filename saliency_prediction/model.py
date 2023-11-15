@@ -90,9 +90,9 @@ class _Decoder(nn.Module):
         self.batchnorm5 = nn.BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
         self.batchnorm6 = nn.BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
 
-        self.TransEncoder1 = TransEncoder(in_channels=2048, spatial_size=9*9, cfg=cfg1)
-        self.TransEncoder2 = TransEncoder(in_channels=1024, spatial_size=18*18, cfg=cfg2)
-        self.TransEncoder3 = TransEncoder(in_channels=512, spatial_size=36*36, cfg=cfg3)
+        self.TransEncoder1 = TransEncoder(in_channels=2048, spatial_size=8*8, cfg=cfg1)
+        self.TransEncoder2 = TransEncoder(in_channels=1024, spatial_size=16*16, cfg=cfg2)
+        self.TransEncoder3 = TransEncoder(in_channels=512, spatial_size=32*32, cfg=cfg3)
 
         self.add = torch.add
         self.relu = nn.ReLU(True)

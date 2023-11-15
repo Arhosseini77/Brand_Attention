@@ -1,10 +1,9 @@
 import cv2
 from PIL import Image
 import numpy as np
-import os
 import torch
-from torch.utils.data import Dataset, DataLoader
-import torch.nn.functional as F
+from torch.utils.data import Dataset
+
 
 def preprocess_img(img_dir, channels=3):
 
@@ -13,8 +12,8 @@ def preprocess_img(img_dir, channels=3):
     elif channels == 3:
         img = cv2.imread(img_dir)
 
-    shape_r = 288
-    shape_c = 288
+    shape_r = 256
+    shape_c = 256
     img_padded = np.ones((shape_r, shape_c, channels), dtype=np.uint8)
     if channels == 1:
         img_padded = np.zeros((shape_r, shape_c), dtype=np.uint8)
@@ -92,7 +91,7 @@ class MyDataset(Dataset):
         img = np.array(image) / 255.
         img = np.transpose(img, (2, 0, 1))
         img = torch.from_numpy(img)
-        img = F.pad(img, (19,19,19,19), "constant", 0)
+        # img = F.pad(img, (19,19,19,19), "constant", 0)
         
         
         tmap_path = self.text_map_dir + self.ids.iloc[idx, 0]
@@ -100,7 +99,7 @@ class MyDataset(Dataset):
         tmap = np.array(tmap_image) / 255.
         tmap = np.transpose(tmap, (2, 0, 1))
         tmap = torch.from_numpy(tmap)
-        tmap = F.pad(tmap, (19,19,19,19), "constant", 0)
+        # tmap = F.pad(tmap, (19,19,19,19), "constant", 0)
 
     
         # if self.transform:
@@ -110,14 +109,14 @@ class MyDataset(Dataset):
         saliency = Image.open(smap_path)
         smap = np.expand_dims(np.array(saliency) / 255., axis=0)
         smap = torch.from_numpy(smap)
-        smap = F.pad(smap, (19,19,19,19), "constant", 0)
+        # smap = F.pad(smap, (19,19,19,19), "constant", 0)
         
 
         fmap_path = self.fixation_dir + self.ids.iloc[idx, 2]
         fixation = Image.open(fmap_path)
         fixation = np.array(fixation)
         fmap = torch.from_numpy(fixation.mean(axis=2) / 255.)
-        fmap = F.pad(fmap, (19,19,19,19), "constant", 0)
+        # fmap = F.pad(fmap, (19,19,19,19), "constant", 0)
         
 
         sample = {'image': img, 'saliency': smap, 'fixation': fmap, 'text_map': tmap}
