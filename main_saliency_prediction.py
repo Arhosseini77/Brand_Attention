@@ -5,7 +5,7 @@ This script takes input image path, text map path, and weight file path as comma
 It performs saliency map prediction and saves the output saliency map.
 
 Usage:
-python script_name.py --img_path path/to/input_image.jpg --weight_path path/to/weights.pth
+python main_saliency_prediction.py --img_path path/to/input_image.jpg --weight_path path/to/weights.pth
                       --tmap path/to/text_map.jpg --output_path path/to/output_directory
 """
 

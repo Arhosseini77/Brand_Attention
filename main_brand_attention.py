@@ -1,3 +1,14 @@
+"""
+ Interface for Brand-Attention Score Calculation.
+
+ Usage:
+ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
+
+ Arguments:
+ --img_path : Path to the input image file.
+ --tmap     : Path to the text map image file.
+ """
+
 import argparse
 
 from Brand_Attention_module.Brand_attention_module import brand_attention_calc
