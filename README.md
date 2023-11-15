@@ -13,6 +13,15 @@ Install the requirements with:
 pip install -r requirements.txt
 ```
 
+Download weights:
+````
+mkdir weights
+cd weights
+gdown 1gGP4X_lwyd8TlxKeaYfj10mSmDPqrAeT  # Logo-Detection-Yolov8
+gdown 1fARIELdC2sfQfg2sd4eRWQnDF1tFkRiq  # ECT-SAL weights
+cd ..
+````
+
 ## Brand-Logo Detection
 
 ### Description
