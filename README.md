@@ -1,5 +1,5 @@
 # Brand Attention
-<iframe src="documentation/Brand_Attention.pdf" width="100%" height="600px" frameborder="0"></iframe>
+![Brand-Attention Module](documentation/Brand_Attention.png)
 ## Installation
 
 Install Pytorch with :
@@ -51,7 +51,7 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 
 
 ## ECT-SAL
-
+![ECT-SAL](documentation/ECT_SAL_Schematic.png)
 ### Description
 This module is designed for predicting saliency maps of images, particularly suited for use in ads and packaging. Model leverages the ECSAL dataset for training. You can find the dataset [here](https://github.com/leafy-lee/E-commercial-dataset).
 
