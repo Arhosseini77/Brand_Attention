@@ -1,5 +1,5 @@
 # Brand Attention
-<a href="link later"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+<a href="https://colab.research.google.com/drive/1jE0mY81mF8lO2Yh8bRo0p_J0HTeHcv6J?authuser=2#scrollTo=mcUVVkhUSXsj"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
 ![Brand-Attention Module](documentation/Brand_Attention.png)
 ## Installation
@@ -92,3 +92,9 @@ python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_pa
 
 ## Brand-Attention
 The Brand Attention Module is a component designed to assess the visibility and attention of a brand within advertisement and packaging images. It combines logo detection and saliency map prediction techniques to quantify the presence and prominence of a brand in a given image.
+
+### Inference
+Run the script:
+```bash
+python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
+```
