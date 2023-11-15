@@ -74,6 +74,6 @@ Table below show ECT-SAL Performance against SOTA methods. (Average,STDEV)
 ### Inference
 Run the script:
 ```bash
-python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_path "weights/ECT_SAL_256.pth" --tmap path/to/test_text_map_image.jpg --output_path path/to/output/directory
+python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_path "weights/ECT_SAL.pth" --tmap path/to/test_text_map_image.jpg --output_path path/to/output/directory
 ```
 ### Result
