@@ -20,8 +20,9 @@ from logo_detection.yolov8_logo import yolov8_logo_detection
 
 def main():
     parser = argparse.ArgumentParser(description="YOLOv8 Logo Detection")
-    parser.add_argument("--model", type=str, required=True, help="Path to YOLOv8 model")
-    parser.add_argument("--image", type=str, required=True, help="Path to input image")
+    parser.add_argument("--model", type=str, default='weights/Logo_Detection_Yolov8.pt'
+                        , help="Path to YOLOv8 trained model")
+    parser.add_argument("--image", type=str, default='test_images/test.jpg', help="Path to input image")
     parser.add_argument("--save-result", action="store_true", help="Save the result image with bounding boxes")
 
     args = parser.parse_args()
