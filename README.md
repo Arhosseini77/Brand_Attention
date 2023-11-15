@@ -91,7 +91,7 @@ python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_pa
 
 ### Training
 
-To train your dataset on the ECT-SAL model, follow the instructions provided in the [ECSAL README](saliency_prediction/README.md).
+To train your dataset on the ECT-SAL model, follow the instructions provided in the [ECT-SAL README](saliency_prediction/README.md).
 
 ### Result
 
