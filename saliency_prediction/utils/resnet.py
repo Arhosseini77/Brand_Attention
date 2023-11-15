@@ -4,8 +4,6 @@ import torch
 import torch.nn as nn
 from torch import Tensor
 
-# from .._internally_replaced_utils import load_state_dict_from_url
-# from ..utils import _log_api_usage_once
 
 
 __all__ = [

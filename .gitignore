@@ -266,4 +266,5 @@ pyrightconfig.json
 *.png
 *.pt
 *.pth
-
+*.ipynb
+*.csv

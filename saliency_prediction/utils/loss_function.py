@@ -1,6 +1,5 @@
 import torch as t
 import torch.nn as nn
-#import numpy as np
 
 
 class SaliencyLoss(nn.Module):
@@ -10,7 +9,7 @@ class SaliencyLoss(nn.Module):
     def forward(self, preds, labels, loss_type='cc'):
         losses = []
         if loss_type == 'cc':
-            for i in range(labels.shape[0]): # labels.shape[0] is batch size
+            for i in range(labels.shape[0]): 
                 loss = loss_CC(preds[i],labels[i])
                 losses.append(loss)
 
@@ -59,22 +58,11 @@ def loss_similarity(pred_map,gt_map):
     
     return score
     
-    
-# def loss_NSS(pred_map,fix_map):
-#     '''ground truth here is fixation map'''
-
-#     pred_map_ = (pred_map - t.mean(pred_map))/t.std(pred_map)
-#     mask = fix_map.gt(0)
-#     score = t.mean(t.masked_select(pred_map_, mask))
-#     return score
-
-
 def loss_NSS(pred_map, fix_map):
     '''ground truth here is a fixation map'''
     
     pred_map_ = (pred_map - t.mean(pred_map)) / t.std(pred_map)
     
-    # Convert the fixation map to a binary mask
     fix_map_binary = fix_map > 0
     
     score = t.mean(t.masked_select(pred_map_, fix_map_binary))
