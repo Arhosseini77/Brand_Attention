@@ -1,3 +1,14 @@
+"""
+Interface for saliency map prediction using ECT-SAL
+
+This script takes input image path, text map path, and weight file path as command-line arguments.
+It performs saliency map prediction and saves the output saliency map.
+
+Usage:
+python script_name.py --img_path path/to/input_image.jpg --weight_path path/to/weights.pth
+                      --tmap path/to/text_map.jpg --output_path path/to/output_directory
+"""
+
 import argparse
 import os
 
@@ -7,17 +18,6 @@ from saliency_prediction import test_saliency_prediction
 
 
 def main():
-    """
-    Interface for saliency map prediction using ECT-SAL
-
-    This script takes input image path, text map path, and weight file path as command-line arguments.
-    It performs saliency map prediction and saves the output saliency map.
-
-    Usage:
-    python script_name.py --img_path path/to/input_image.jpg --weight_path path/to/weights.pth
-                          --tmap path/to/text_map.jpg --output_path path/to/output_directory
-    """
-
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Saliency Map Prediction')
     parser.add_argument('--img_path', type=str, default='test_images/test.jpg', help='path to input image')
