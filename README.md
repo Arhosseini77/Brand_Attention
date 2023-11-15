@@ -72,7 +72,7 @@ Table below show ECT-SAL Performance against SOTA methods. (Average,STDEV)
 
 
 ### Inference
-* For saliency map prediction, it is essential to provide a corresponding text map. We recommend using the DBNET++ model available [here]("https://github.com/WenmuZhou/DBNet.pytorch") to generate accurate text maps for improved saliency predictions.
+* For saliency map prediction, it is essential to provide a corresponding text map. We recommend using the DBNET++ model available [here](https://github.com/WenmuZhou/DBNet.pytorch) to generate accurate text maps for improved saliency predictions.
 Run the script:
 ```bash
 python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_path "weights/ECT_SAL.pth" --tmap path/to/test_text_map_image.jpg --output_path path/to/output/directory
