@@ -1,7 +1,6 @@
 import torch
-import cv2
 import numpy as np
-from torchvision import transforms, utils, models
+from torchvision import transforms
 from saliency_prediction.utils.data_process import preprocess_img, postprocess_img
 from saliency_prediction.model import ECT_SAL
 
@@ -49,7 +48,7 @@ def saliency_map_prediction_brand(img_path , text_map_path):
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     # Weight Path
-    weight_path = "weights/Saliency_Map_Prediction.pth"
+    weight_path = "weights/ECT_SAL.pth"
 
     # load Model
     model = ECT_SAL()
@@ -76,4 +75,5 @@ def saliency_map_prediction_brand(img_path , text_map_path):
     toPIL = transforms.ToPILImage()
     pic = toPIL(pred_saliency.squeeze())
     pred_saliency = postprocess_img(pic, img_path)
+
     return pred_saliency

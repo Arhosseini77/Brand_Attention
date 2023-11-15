@@ -1,5 +1,5 @@
 # Brand Attention
-
+<iframe src="documentation/Brand_Attention.pdf" width="100%" height="600px" frameborder="0"></iframe>
 ## Installation
 
 Install Pytorch with :
@@ -78,3 +78,6 @@ Run the script:
 python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_path "weights/ECT_SAL.pth" --tmap path/to/test_text_map_image.jpg --output_path path/to/output/directory
 ```
 ### Result
+
+## Brand-Attention
+The Brand Attention Module is a component designed to assess the visibility and attention of a brand within advertisement and packaging images. It combines logo detection and saliency map prediction techniques to quantify the presence and prominence of a brand in a given image.
