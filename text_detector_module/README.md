@@ -4,7 +4,7 @@ this module is based on [DBNET++](https://github.com/xuannianz/DifferentiableBin
 
 Google colab notebook of text-detector module available here:
 
-<a href="https://colab.research.google.com/drive/1vAzgnLDs94wNuMAEPImSftlnYeEtO6Nw?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+<a href="https://colab.research.google.com/drive/1AQZAabdWNalgDZjsYRKRfv2HOeGXWTKU?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
 ## RUN
 
