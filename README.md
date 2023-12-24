@@ -53,7 +53,8 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 This module is designed for predicting saliency maps of images, particularly suited for use in ads and packaging. Model leverages the ECSAL dataset for training. You can find the dataset [here](https://github.com/leafy-lee/E-commercial-dataset).
 
 ### Inference
-* For saliency map prediction, it is essential to provide a corresponding text map. We recommend using the DBNET++ model available [here](https://github.com/WenmuZhou/DBNet.pytorch) to generate accurate text maps for improved saliency predictions.
+* For saliency map prediction, it is essential to provide a corresponding text map. Use the DBNET++ model available [here](text_detector_module/README.md) to generate accurate text maps for improved saliency predictions.
+
 Run the script:
 ```bash
 python main_saliency_prediction.py --img_path path/to/your/image.jpg --weight_path "weights/ECT_SAL.pth" --tmap path/to/test_text_map_image.jpg --output_path path/to/output/directory
@@ -69,7 +70,9 @@ To train your dataset on the ECT-SAL model, follow the instructions provided in 
 The Brand Attention Module is a component designed to assess the visibility and attention of a brand within advertisement and packaging images. It combines logo detection and saliency map prediction techniques to quantify the presence and prominence of a brand in a given image.
 
 ### Inference
-Run the script:
+
+* For saliency map prediction, it is essential to provide a corresponding text map. Use the DBNET++ model available [here](text_detector_module/README.md) to generate accurate text maps for improved saliency predictions.
+
 ```bash
 python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
 ```
