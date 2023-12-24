@@ -73,3 +73,8 @@ Run the script:
 ```bash
 python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
 ```
+ * If the detection is accurate and aligns with the brand logo, press ![1](https://via.placeholder.com/15/008000/000000?text=1) to confirm.
+
+ * In cases where adjustments are needed or discrepancies exist, press ![2](https://via.placeholder.com/15/FF0000/000000?text=2) to signify the need for refinement.
+
+ * For refinement, use the interactive feature to draw new bounding boxes (bboxes) directly on the image. This hands-on approach allows for precise customization of logo localization.
