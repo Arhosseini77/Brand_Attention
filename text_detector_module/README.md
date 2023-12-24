@@ -2,6 +2,10 @@
 
 this module is based on [DBNET++](https://github.com/xuannianz/DifferentiableBinarization) Model 
 
+Google colab notebook of text-detector module available here:
+
+<a href="https://colab.research.google.com/drive/1vAzgnLDs94wNuMAEPImSftlnYeEtO6Nw?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+
 ## RUN
 
 * Python 3.7
@@ -27,3 +31,4 @@ gdown 1esUCA8JGrZYNIWI1ZvNiistDpZmElttq
 ```python
 python inference_textmap.py --input_dir ./path_to_input_dir --output_dir ./path_to_output_dir
 ```
+
