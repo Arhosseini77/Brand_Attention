@@ -268,3 +268,5 @@ pyrightconfig.json
 *.pth
 *.ipynb
 *.csv
+*.zip
+test_script.py
