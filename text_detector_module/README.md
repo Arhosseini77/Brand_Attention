@@ -1,3 +1,29 @@
 # Text-Detection Module
-<a href="https://colab.research.google.com/drive/1jE0mY81mF8lO2Yh8bRo0p_J0HTeHcv6J?authuser=2#scrollTo=mcUVVkhUSXsj"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
+this module is based on [DBNET++](https://github.com/xuannianz/DifferentiableBinarization) Model 
+
+## RUN
+
+* Python 3.7
+* install requirements
+
+```python
+pip install keras_resnet
+pip install pyclipper
+pip install opencv-python==3.4.2.17
+pip install shapely
+pip install tensorflow-gpu==1.14.0
+pip install protobuf==3.20
+pip install Keras==2.2.5
+pip install h5py==2.10.0
+```
+
+* Download Weights
+```python
+gdown 1esUCA8JGrZYNIWI1ZvNiistDpZmElttq
+```
+
+* Inference
+```python
+python inference_textmap.py --input_dir ./path_to_input_dir --output_dir ./path_to_output_dir
+```
