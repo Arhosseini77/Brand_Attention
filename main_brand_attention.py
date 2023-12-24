@@ -13,6 +13,7 @@ import argparse
 
 from Brand_Attention_module.Brand_attention_module import brand_attention_calc2
 
+
 def main():
     parser = argparse.ArgumentParser(description='Brand Change Score Calculation')
     parser.add_argument('--img_path', type=str, default='test_images/test.jpg', help='path to input image')
