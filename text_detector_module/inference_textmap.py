@@ -12,11 +12,13 @@ import tensorflow as tf
 import pyclipper
 import keras.backend as K
 
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Textmap generator')
     parser.add_argument('--input_dir', type=str, help='Input directory path')
     parser.add_argument('--output_dir', type=str, help='Output directory path')
     return parser.parse_args()
+
 
 def balanced_crossentropy_loss(args, negative_ratio=3., scale=5.):
     pred, gt, mask = args
@@ -38,7 +40,6 @@ def balanced_crossentropy_loss(args, negative_ratio=3., scale=5.):
 
 def dice_loss(args):
     """
-
     Args:
         pred: (b, h, w, 1)
         gt: (b, h, w)
@@ -133,6 +134,7 @@ def dbnet(input_size=640, k=50):
                                   outputs=loss)
     prediction_model = models.Model(inputs=image_input, outputs=p)
     return training_model, prediction_model
+
 
 
 
