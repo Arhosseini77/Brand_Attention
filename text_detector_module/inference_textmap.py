@@ -151,7 +151,6 @@ def resize_image(image, image_short_side=736):
 
 
 def box_score_fast(bitmap, _box):
-    # 计算 box 包围的区域的平均得分
     h, w = bitmap.shape[:2]
     box = _box.copy()
     xmin = np.clip(np.floor(box[:, 0].min()).astype(np.int), 0, w - 1)
