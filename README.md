@@ -65,6 +65,12 @@ To train your dataset on the ECT-SAL model, follow the instructions provided in 
 
 ### Result
 
+|             Original Image                | Saliency Map                                  |
+| ------------------------------------------------------ |-----------------------------------------------|
+|  ![Original Image](test_images/test.jpg) | ![Saliency Map](results/test_saliencymap.png) |
+
+
+
 ## Brand-Attention
 The Brand Attention Module is a component designed to assess the visibility and attention of a brand within advertisement and packaging images. It combines logo detection and saliency map prediction techniques to quantify the presence and prominence of a brand in a given image.
 
