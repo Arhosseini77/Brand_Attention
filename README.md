@@ -1,7 +1,5 @@
 # Brand Attention
-<a href="https://colab.research.google.com/drive/1jE0mY81mF8lO2Yh8bRo0p_J0HTeHcv6J?authuser=2#scrollTo=mcUVVkhUSXsj"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
-
-[Paper]("link_to_paper")  | [ProjectPage]("https://arhosseini77.github.io")
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jE0mY81mF8lO2Yh8bRo0p_J0HTeHcv6J?authuser=2#scrollTo=mcUVVkhUSXsj) | [Paper](link_to_paper) | [Project Page](https://arhosseini77.github.io)
 
 
 ![Brand-Attention Module](documentation/Brand_Attention.png)
