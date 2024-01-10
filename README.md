@@ -88,7 +88,7 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
  * For refinement, use the interactive feature to draw new bounding boxes (bboxes) directly on the image. This hands-on approach allows for precise customization of logo localization.
 
 ## Acknowledgement
-We thank the authors of [WIRE](https://github.com/vishwa91/wire), [MINER_pl](https://github.com/kwea123/MINER_pl), [torch-ngp](https://github.com/ashawkey/torch-ngp), and [SIREN for inpainting](https://github.com/dalmia/siren/tree/master) for their code repositories.
+We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
 
 
 ## Citation
