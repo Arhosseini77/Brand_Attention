@@ -86,3 +86,17 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
  * In cases where adjustments are needed or discrepancies exist, press ![2](https://via.placeholder.com/15/FF0000/000000?text=2) to signify the need for refinement.
 
  * For refinement, use the interactive feature to draw new bounding boxes (bboxes) directly on the image. This hands-on approach allows for precise customization of logo localization.
+
+## Acknowledgement
+We thank the authors of [WIRE](https://github.com/vishwa91/wire), [MINER_pl](https://github.com/kwea123/MINER_pl), [torch-ngp](https://github.com/ashawkey/torch-ngp), and [SIREN for inpainting](https://github.com/dalmia/siren/tree/master) for their code repositories.
+
+
+## Citation
+```bibtex
+@article{hosseini2024brandattention,
+  title={},
+  author={},
+  journal={},
+  year={2024}
+}
+```
