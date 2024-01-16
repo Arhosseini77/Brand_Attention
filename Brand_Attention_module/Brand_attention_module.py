@@ -1,3 +1,7 @@
+"""This module contains functions for calculating brand attention in packaging and advertisement images. It includes
+functionalities for merge logo detection result , saliency map prediction result, and processing these results to
+compute a brand attention score. """
+
 import cv2
 import numpy as np
 
