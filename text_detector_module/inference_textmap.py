@@ -75,7 +75,6 @@ def db_loss(args):
     return l1_loss_ + balanced_ce_loss_ + dice_loss_
 
 
-
 def dbnet(input_size=640, k=50):
     image_input = layers.Input(shape=(None, None, 3))
     gt_input = layers.Input(shape=(input_size, input_size))
@@ -134,8 +133,6 @@ def dbnet(input_size=640, k=50):
                                   outputs=loss)
     prediction_model = models.Model(inputs=image_input, outputs=p)
     return training_model, prediction_model
-
-
 
 
 def resize_image(image, image_short_side=736):
@@ -231,7 +228,6 @@ def polygons_from_bitmap(pred, bitmap, dest_width, dest_height, max_candidates=1
         boxes.append(box.tolist())
         scores.append(score)
     return boxes, scores
-
 
 
 if __name__ == '__main__':
