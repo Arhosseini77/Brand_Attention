@@ -1,8 +1,9 @@
-import torch
 import numpy as np
+import torch
 from torchvision import transforms
-from saliency_prediction.utils.data_process import preprocess_img, postprocess_img
+
 from saliency_prediction.model import ECT_SAL
+from saliency_prediction.utils.data_process import preprocess_img, postprocess_img
 
 
 def saliency_map_prediction(img_path, text_map_path, weight_path):
