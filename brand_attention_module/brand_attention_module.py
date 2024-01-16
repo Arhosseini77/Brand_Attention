@@ -5,8 +5,8 @@ compute a brand attention score. """
 import cv2
 import numpy as np
 
-from logo_detection.yolov8_logo import yolov8_logo_detection
-from saliency_prediction.test_saliency_prediction import saliency_map_prediction_brand
+from logo_detection.logo_detection_module import yolov8_logo_detection
+from saliency_prediction.saliency_prediction_module import saliency_map_prediction_brand
 
 
 def calculate_sum_of_probabilities(saliency_map, bounding_boxes):

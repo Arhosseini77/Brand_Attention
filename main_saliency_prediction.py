@@ -14,7 +14,7 @@ import os
 
 import cv2
 
-from saliency_prediction import test_saliency_prediction
+from saliency_prediction import saliency_prediction_module
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
     filename = os.path.splitext(os.path.basename(args.img_path))[0]
 
     # Perform the saliency map prediction
-    pred_saliency = test_saliency_prediction.saliency_map_prediction(args.img_path, args.tmap, args.weight_path)
+    pred_saliency = saliency_prediction_module.saliency_map_prediction(args.img_path, args.tmap, args.weight_path)
 
     # Write the output saliency map
     output_filename = f'{filename}_saliencymap.png'

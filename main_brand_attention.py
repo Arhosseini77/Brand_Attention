@@ -11,7 +11,7 @@
 
 import argparse
 
-from Brand_Attention_module.Brand_attention_module import brand_attention_calc2
+from brand_attention_module.brand_attention_module import brand_attention_calc2
 
 
 def main():

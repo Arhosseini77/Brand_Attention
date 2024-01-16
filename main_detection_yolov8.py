@@ -15,7 +15,7 @@ Arguments:
 
 import argparse
 
-from logo_detection.yolov8_logo import yolov8_logo_detection
+from logo_detection.logo_detection_module import yolov8_logo_detection
 
 
 def main():
