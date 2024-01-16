@@ -64,6 +64,20 @@ def saliency_map_prediction(img_path, text_map_path, weight_path):
 
 
 def saliency_map_prediction_brand(img_path , text_map_path):
+    """
+    Predicts the saliency map of an image given its path and a text map path,
+    using the ECT_SAL model with predefined weights.
+
+    Parameters:
+    img_path (str): Path to the image file.
+    text_map_path (str): Path to the text map file.
+
+    Returns:
+    Image object of the predicted saliency map.
+
+    This function is similar to `saliency_map_prediction` but uses a predefined weight path
+    for the ECT_SAL model. It is tailored for brand-attention applications
+    """
 
     # Set Device
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -86,15 +100,22 @@ def saliency_map_prediction_brand(img_path , text_map_path):
     img = np.expand_dims(np.transpose(img, (2, 0, 1)), axis=0)
     tmap = np.expand_dims(np.transpose(tmap, (2, 0, 1)), axis=0)
 
+    # Convert to torch tensors
     img = torch.from_numpy(img)
     tmap = torch.from_numpy(tmap)
 
+    # Move tensors to the computation device
     img = img.type(torch.cuda.FloatTensor).to(device)
     tmap = tmap.type(torch.cuda.FloatTensor).to(device)
 
+    # Predict the saliency map
     pred_saliency = model(img, tmap)
+
+    # Convert the prediction to a PIL Image
     toPIL = transforms.ToPILImage()
     pic = toPIL(pred_saliency.squeeze())
+
+    # Postprocess the saliency map
     pred_saliency = postprocess_img(pic, img_path)
 
     return pred_saliency
