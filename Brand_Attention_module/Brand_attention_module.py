@@ -1,7 +1,9 @@
-import numpy as np
 import cv2
-from saliency_prediction.test_saliency_prediction import saliency_map_prediction_brand
+import numpy as np
+
 from logo_detection.yolov8_logo import yolov8_logo_detection
+from saliency_prediction.test_saliency_prediction import saliency_map_prediction_brand
+
 
 def calculate_sum_of_probabilities(saliency_map, bounding_boxes):
     if bounding_boxes == "none":
@@ -53,12 +55,14 @@ def resize_image_aspect_ratio(image, width=None):
     resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
     return resized, r
 
+
 # Function to draw rectangles on the image
 def draw_rectangles(image, bboxes):
     for bbox in bboxes:
         xmin, ymin, xmax, ymax = map(int, bbox)
         cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (0, 255, 0), 2)
     return image
+
 
 # Mouse callback function for drawing bboxes
 def draw_bbox(event, x, y, flags, param):
@@ -74,6 +78,7 @@ def draw_bbox(event, x, y, flags, param):
         # Scale bbox coordinates back to original image size
         scaled_bbox = [ix / resize_scale, iy / resize_scale, x / resize_scale, y / resize_scale]
         bboxes.append(scaled_bbox)
+
 
 # Main function for brand attention calculation
 def brand_attention_calc2(img_path, tmap_path):
