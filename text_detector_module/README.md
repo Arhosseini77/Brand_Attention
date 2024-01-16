@@ -6,7 +6,7 @@ Google colab notebook of text-detector module available here:
 
 <a href="https://colab.research.google.com/drive/1AQZAabdWNalgDZjsYRKRfv2HOeGXWTKU?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
-## RUN
+## Quick Start
 
 * Python 3.7
 * install requirements
@@ -31,4 +31,7 @@ gdown 1esUCA8JGrZYNIWI1ZvNiistDpZmElttq
 ```python
 python inference_textmap.py --input_dir ./path_to_input_dir --output_dir ./path_to_output_dir
 ```
+
+## Example
+
 
