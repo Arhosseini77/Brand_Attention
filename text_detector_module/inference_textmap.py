@@ -153,6 +153,16 @@ def dbnet(input_size=640, k=50):
 
 
 def resize_image(image, image_short_side=736):
+    """
+    Resize the image while maintaining aspect ratio.
+
+    Args:
+       image (numpy.ndarray): Original image.
+       image_short_side (int): Size of the shorter side after resizing.
+
+    Returns:
+       numpy.ndarray: Resized image.
+    """
     height, width, _ = image.shape
     if height < width:
         new_height = image_short_side
