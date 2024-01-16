@@ -1,3 +1,9 @@
+"""
+The script is set up to process each .png image in the specified input directory,
+detect text regions using the DBNet model,
+and then save the modified images where the detected text areas are highlighted to the specified output directory.
+"""
+
 import argparse
 import math
 import os
