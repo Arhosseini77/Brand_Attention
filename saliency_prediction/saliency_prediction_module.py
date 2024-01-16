@@ -16,7 +16,7 @@ def saliency_map_prediction(img_path, text_map_path, weight_path):
     weight_path (str): Path to the weights file for the ECT_SAL model.
 
     Returns:
-    PIL.Image: A PIL Image object of the predicted saliency map.
+    Image object of the predicted saliency map.
 
     This function loads a pre-trained ECT_SAL model, processes the input image and text map,
     and predicts the saliency map. The result is post-processed and returned as a PIL image.
