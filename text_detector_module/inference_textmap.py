@@ -276,21 +276,28 @@ if __name__ == '__main__':
     # Load pre-trained weights for the model.
     model.load_weights('./model.h5', by_name=True, skip_mismatch=True)
 
-    input_dir = args.input_dir  # Set the input directory.
-    output_dir = args.output_dir  # Set the output directory.
+    # Set the input and output directory.
+    input_dir = args.input_dir  
+    output_dir = args.output_dir  
 
     # Walk through the directory tree of the input directory.
     for root, dirs, files in os.walk(input_dir):
         for name in files:
-            if name.endswith(".png"):  # Process only PNG files.
-                image_path = osp.join(root, name)  # Create full path to the image.
-                image = cv2.imread(image_path)  # Read the image.
-                src_image = image.copy()  # Make a copy of the original image for later use.
-                h, w = image.shape[:2]  # Get height and width of the image.
+            # Process only PNG files. (feel free to change or add other format)
+            if name.endswith(".png"):
+                image_path = osp.join(root, name)
+                image = cv2.imread(image_path)
 
-                image = resize_image(image)  # Resize the image maintaining aspect ratio.
-                image = image.astype(np.float32)  # Convert image to float32 type.
-                image -= mean  # Normalize the image by subtracting mean values.
+                # Make a copy of the original image for later use.
+                src_image = image.copy()
+                h, w = image.shape[:2]
+
+                # Resize the image maintaining aspect ratio.
+                image = resize_image(image)
+                # Convert image to float32 type.
+                image = image.astype(np.float32)
+                # Normalize the image by subtracting mean values.
+                image -= mean
 
                 image_input = np.expand_dims(image, axis=0)  # Add batch dimension to the image.
                 p = model.predict(image_input)[0]  # Predict text regions in the image.
