@@ -41,7 +41,6 @@ def saliency_map_prediction(img_path , text_map_path , weight_path ):
     return pred_saliency
 
 
-
 def saliency_map_prediction_brand(img_path , text_map_path):
 
     # Set Device
