@@ -32,6 +32,9 @@ gdown 1esUCA8JGrZYNIWI1ZvNiistDpZmElttq
 python inference_textmap.py --input_dir ./path_to_input_dir --output_dir ./path_to_output_dir
 ```
 
-## Example
+## Result
 
+| Original Image                      | Saliency Map                           |
+|-------------------------------------|----------------------------------------|
+| ![Original Image](results/test.jpg) | ![Saliency Map](results/test_tmap.jpg) |
 
