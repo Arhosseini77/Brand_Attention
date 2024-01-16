@@ -1,16 +1,16 @@
+import argparse
 import math
-import cv2
 import os
 import os.path as osp
-import glob
-import argparse
-import numpy as np
-from shapely.geometry import Polygon
-from keras_resnet.models import ResNet50
-from keras import layers, models
-import tensorflow as tf
-import pyclipper
+
+import cv2
 import keras.backend as K
+import numpy as np
+import pyclipper
+import tensorflow as tf
+from keras import layers, models
+from keras_resnet.models import ResNet50
+from shapely.geometry import Polygon
 
 
 def parse_args():
