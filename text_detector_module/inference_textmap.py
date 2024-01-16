@@ -82,6 +82,17 @@ def db_loss(args):
 
 
 def dbnet(input_size=640, k=50):
+    """
+    Construct DBNet for text detection.
+
+    Args:
+        input_size (int): Size of the input image.
+        k (float): Scaling factor for the binary map.
+
+    Returns:
+        Tuple[models.Model, models.Model]: Training and prediction models.
+    """
+
     image_input = layers.Input(shape=(None, None, 3))
     gt_input = layers.Input(shape=(input_size, input_size))
     mask_input = layers.Input(shape=(input_size, input_size))
