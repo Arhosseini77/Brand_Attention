@@ -299,9 +299,12 @@ if __name__ == '__main__':
                 # Normalize the image by subtracting mean values.
                 image -= mean
 
-                image_input = np.expand_dims(image, axis=0)  # Add batch dimension to the image.
-                p = model.predict(image_input)[0]  # Predict text regions in the image.
-                bitmap = p > 0.3  # Thresholding to create a binary map.
+                # Add batch dimension to the image.
+                image_input = np.expand_dims(image, axis=0)
+                # Predict text regions in the image.
+                p = model.predict(image_input)[0]
+                # Thresholding to create a binary map.
+                bitmap = p > 0.3
 
                 # Extract polygons around text regions and their scores.
                 boxes, scores = polygons_from_bitmap(p, bitmap, w, h, box_thresh=0.5)
