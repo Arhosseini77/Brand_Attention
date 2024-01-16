@@ -264,47 +264,58 @@ def polygons_from_bitmap(pred, bitmap, dest_width, dest_height, max_candidates=1
 
 
 if __name__ == '__main__':
+    # Parse command line arguments for input and output directories.
     args = parse_args()
 
+    # Define mean values for image normalization.
     mean = np.array([103.939, 116.779, 123.68])
 
+    # Initialize the DBNet model.
     _, model = dbnet()
-    model.load_weights('./model.h5', by_name=True, skip_mismatch=True)
-    
-    input_dir = args.input_dir
-    output_dir = args.output_dir
 
-    # Walk through the directory tree
+    # Load pre-trained weights for the model.
+    model.load_weights('./model.h5', by_name=True, skip_mismatch=True)
+
+    input_dir = args.input_dir  # Set the input directory.
+    output_dir = args.output_dir  # Set the output directory.
+
+    # Walk through the directory tree of the input directory.
     for root, dirs, files in os.walk(input_dir):
         for name in files:
-            if name.endswith(".png"):
-                image_path = osp.join(root, name)
-                image = cv2.imread(image_path)
-                src_image = image.copy()
-                h, w = image.shape[:2]
-                image = resize_image(image)
-                image = image.astype(np.float32)
-                image -= mean
-                image_input = np.expand_dims(image, axis=0)
-                p = model.predict(image_input)[0]
-                bitmap = p > 0.3
+            if name.endswith(".png"):  # Process only PNG files.
+                image_path = osp.join(root, name)  # Create full path to the image.
+                image = cv2.imread(image_path)  # Read the image.
+                src_image = image.copy()  # Make a copy of the original image for later use.
+                h, w = image.shape[:2]  # Get height and width of the image.
+
+                image = resize_image(image)  # Resize the image maintaining aspect ratio.
+                image = image.astype(np.float32)  # Convert image to float32 type.
+                image -= mean  # Normalize the image by subtracting mean values.
+
+                image_input = np.expand_dims(image, axis=0)  # Add batch dimension to the image.
+                p = model.predict(image_input)[0]  # Predict text regions in the image.
+                bitmap = p > 0.3  # Thresholding to create a binary map.
+
+                # Extract polygons around text regions and their scores.
                 boxes, scores = polygons_from_bitmap(p, bitmap, w, h, box_thresh=0.5)
-                
-                # Create an empty mask image
+
+                # Create an empty mask image of the same size as the source image.
                 mask = np.zeros(src_image.shape[:2], dtype=np.uint8)
 
-                # Draw the contours on the mask
+                # Draw the contours on the mask based on the boxes.
                 for box in boxes:
                     cv2.drawContours(mask, [np.array(box, dtype=np.int32)], -1, 255, thickness=cv2.FILLED)
-                
-                # Set pixels outside the contours to zero
+
+                # Set pixels outside the contours to zero in the source image.
                 src_image[np.where(mask == 0)] = 0
-                
-                # Save the modified image
+
+                # Create the output directory structure if it doesn't exist.
                 relative_root = osp.relpath(root, input_dir)
                 output_folder = osp.join(output_dir, relative_root)
                 if not osp.exists(output_folder):
                     os.makedirs(output_folder)
 
+                # Save the modified image to the output directory.
                 output_path = osp.join(output_folder, name)
                 cv2.imwrite(output_path, src_image)
+
