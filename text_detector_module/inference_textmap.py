@@ -14,6 +14,12 @@ from shapely.geometry import Polygon
 
 
 def parse_args():
+    """
+    Parse command line arguments for the textmap generator.
+
+    Returns:
+        Namespace: Parsed arguments with 'input_dir' and 'output_dir'.
+    """
     parser = argparse.ArgumentParser(description='Textmap generator')
     parser.add_argument('--input_dir', type=str, help='Input directory path')
     parser.add_argument('--output_dir', type=str, help='Output directory path')
