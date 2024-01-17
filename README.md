@@ -116,7 +116,27 @@ This Module is a component designed to assess the visibility and attention of an
 python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
 ```
 
+### Result 
 
+<div style="text-align:center;">
+    <div style="display:flex; justify-content:center; align-items:center;">
+        <div style="margin-right:0.5px;">
+            <figure>
+                <img src="test_images/test_obj.jpg" alt="Input" style="width:400px; height:auto;">
+                <figcaption>Input</figcaption>
+            </figure>
+        </div>
+        <div style="margin-left:0.5px;">
+            <figure>
+                <img src="test_images/test_obj_tmap.jpg" alt="BBox" style="width:400px; height:auto;">
+                <figcaption>BBox</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div style="text-align:center; font-weight:bold; margin-top:10px;">
+        Attention Score: 26%
+    </div>
+</div>
 
 ## Acknowledgement
 We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
