@@ -21,7 +21,7 @@ def main():
     args = parser.parse_args()
 
     # Calculate brand change score
-    brand_change_score = brand_attention_calc2(args.img_path, args.tmap)
+    brand_change_score = object_attention_calc(args.img_path, args.tmap)
 
     print(f"Brand Change Score: {brand_change_score}")
 
