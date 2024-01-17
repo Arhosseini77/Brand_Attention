@@ -120,6 +120,8 @@ This Module is a component designed to assess the visibility and attention of an
 python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
 ```
 
+* draw bounding boxes around objects of interest, press the **Enter** key to calculate and obtain the attention score for the selected objects.
+
 ### Result 
 
 <div style="text-align:center;">
