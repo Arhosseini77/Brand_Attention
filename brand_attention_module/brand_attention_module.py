@@ -127,6 +127,11 @@ def brand_attention_calc2(img_path, tmap_path):
     return score
 
 
+import cv2
+from saliency_prediction.saliency_prediction_module import saliency_map_prediction_brand
+
+# ... (existing code)
+
 def object_attention_calc(img_path, tmap_path):
     global img, bboxes, drawing, resize_scale
 
@@ -151,13 +156,24 @@ def object_attention_calc(img_path, tmap_path):
 
     while True:
         cv2.imshow('Image', img_with_boxes)
-        if cv2.waitKey(1) & 0xFF == 13:  # Enter key to finish
-            break
+        key = cv2.waitKey(1) & 0xFF
 
+        if key == 13:  # Enter key to finish
+            break
+        elif key == 27:  # ESC key to exit without drawing
+            cv2.destroyAllWindows()
+            return None  # You may want to handle this case accordingly
+
+    cv2.destroyAllWindows()
+
+    # Show the drawn bounding box before finishing
+    img_with_drawn_box = draw_rectangles(img.copy(), [bboxes])
+    cv2.imshow('Image with Drawn Box', img_with_drawn_box)
+    cv2.waitKey(0)
     cv2.destroyAllWindows()
 
     # Continue with the brand attention calculation
     pred_saliency = saliency_map_prediction_brand(img_path, tmap_path)
-    score = calculate_sum_of_probabilities(pred_saliency, bboxes)
+    score = calculate_sum_of_probabilities(pred_saliency, [bboxes])
 
     return score
