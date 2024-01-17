@@ -150,7 +150,8 @@ def object_attention_calc(img_path, tmap_path):
     # Loop to keep the window open until 'Enter' key is pressed
     while True:
         cv2.imshow('Image', img)
-        if cv2.waitKey(1) & 0xFF == 13:  # Enter key to finish
+        # Enter key to finish
+        if cv2.waitKey(1) & 0xFF == 13:
             break
 
     cv2.destroyAllWindows()
