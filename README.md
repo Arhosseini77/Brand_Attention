@@ -106,7 +106,6 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 
 
 
-
 ## Advertisment image object Attention
 This Module is a component designed to assess the visibility and attention of any object you want within advertisement and packaging images. It saliency map prediction techniques to quantify the presence and prominence of that object in a given image.
 ### Inference
@@ -114,8 +113,10 @@ This Module is a component designed to assess the visibility and attention of an
 * For saliency map prediction, it is essential to provide a corresponding text map. Use the DBNET++ model available [here](text_detector_module/README.md) to generate accurate text maps for improved saliency predictions.
 
 ```bash
-python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
+python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/to/text_map.jpg
 ```
+
+
 
 ## Acknowledgement
 We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
