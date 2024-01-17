@@ -155,9 +155,9 @@ def object_attention_calc(img_path, tmap_path):
 
         if key == 13:  # Enter key to finish
             break
-        elif key == 27:  # ESC key to exit without drawing
+        elif key == 27:
             cv2.destroyAllWindows()
-            return None  # You may want to handle this case accordingly
+            return None
 
     cv2.destroyAllWindows()
 
