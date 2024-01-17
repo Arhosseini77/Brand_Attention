@@ -128,13 +128,13 @@ python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/t
     <div style="display:flex; justify-content:center; align-items:center;">
         <div style="margin-right:0.5px;">
             <figure>
-                <img src="test_images/test_obj.jpg" alt="Input" style="width:400px; height:auto;">
+                <img src="test_images/test_obj.jpg" alt="Input" style="width:200px; height:auto;">
                 <figcaption>Input Image</figcaption>
             </figure>
         </div>
         <div style="margin-left:0.5px;">
             <figure>
-                <img src="test_images/test_obj_bbox.png" alt="BBox" style="width:400px; height:auto;">
+                <img src="test_images/test_obj_bbox.png" alt="BBox" style="width:200px; height:auto;">
                 <figcaption>BBox Selected</figcaption>
             </figure>
         </div>
