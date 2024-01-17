@@ -126,3 +126,44 @@ def brand_attention_calc2(img_path, tmap_path):
     score = calculate_sum_of_probabilities(pred_saliency, bboxes)
     return score
 
+
+def object_attention_calc(img_path, tmap_path):
+    global img, bboxes, drawing, resize_scale
+
+    # Load image
+    original_img = cv2.imread(img_path)
+    if original_img is None:
+        print(f"Error loading image from {img_path}")
+        return
+
+    # Resize image for display
+    img, resize_scale = resize_image_aspect_ratio(original_img, width=720)
+
+    # Scale detected bboxes according to the resized image
+    detected_bboxes = yolov8_logo_detection("weights/Logo_Detection_Yolov8.pt", img_path, save_result=False)
+    scaled_detected_bboxes = [[x * resize_scale, y * resize_scale, w * resize_scale, h * resize_scale] for [x, y, w, h] in detected_bboxes]
+
+    # Draw rectangles on the resized image
+    img_with_boxes = draw_rectangles(img.copy(), scaled_detected_bboxes)
+    cv2.imshow('Image', img_with_boxes)
+    print("Check the image window. Press '1' if OK, '2' to draw boxes, then press 'Enter'.")
+
+    key = cv2.waitKey(0)
+
+    if key == ord('2'):
+        bboxes = []  # Reset bboxes
+        cv2.setMouseCallback('Image', draw_bbox)
+        print("Draw boxes. Press 'Enter' key in the console when done.")
+        while True:
+            cv2.imshow('Image', img)
+            if cv2.waitKey(1) & 0xFF == 13:  # Enter key to finish
+                break
+    elif key == ord('1'):
+        bboxes = detected_bboxes
+
+    cv2.destroyAllWindows()
+
+    # Continue with the brand attention calculation
+    pred_saliency = saliency_map_prediction_brand(img_path, tmap_path)
+    score = calculate_sum_of_probabilities(pred_saliency, bboxes)
+    return score
