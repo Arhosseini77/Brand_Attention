@@ -139,30 +139,23 @@ def object_attention_calc(img_path, tmap_path):
     # Resize image for display
     img, resize_scale = resize_image_aspect_ratio(original_img, width=720)
 
-    # Initialize variables
-    bboxes = []
+    # Display the image for the user to draw bounding boxes
+    cv2.imshow('Image', img)
+    print("Draw boxes on the image. Press 'Enter' key when done.")
 
-    # Draw rectangles on the resized image
-    img_with_boxes = img.copy()
-    cv2.imshow('Image', img_with_boxes)
+    # Initialize bounding boxes list and set the callback for mouse events
+    bboxes = []
     cv2.setMouseCallback('Image', draw_bbox)
 
-    print("Draw a bounding box. Press 'Enter' key in the console when done.")
-
+    # Loop to keep the window open until 'Enter' key is pressed
     while True:
-        cv2.imshow('Image', img_with_boxes)
-        key = cv2.waitKey(1) & 0xFF
-
-        if key == 13:  # Enter key to finish
+        cv2.imshow('Image', img)
+        if cv2.waitKey(1) & 0xFF == 13:  # Enter key to finish
             break
-        elif key == 27:
-            cv2.destroyAllWindows()
-            return None
 
     cv2.destroyAllWindows()
 
-    # Continue with the brand attention calculation
+    # Continue with the object attention calculation
     pred_saliency = saliency_map_prediction_brand(img_path, tmap_path)
     score = calculate_sum_of_probabilities(pred_saliency, bboxes)
-
     return score
