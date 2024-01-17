@@ -89,11 +89,21 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 
 ### Result 
 
-| Original Image                             |
-|--------------------------------------------|
-| ![Original Image](test_images/test.jpg)    | 
-| Brand-Attention Score                      |
-| 25.75                                      | 
+<table>
+  <tr>
+    <td>Original Image</td>
+  </tr>
+  <tr>
+    <td><img src="test_images/test.jpg" alt="Original Image"></td>
+  </tr>
+  <tr>
+    <td style="text-align:center; font-weight:bold;">Brand-Attention Score</td>
+  </tr>
+  <tr>
+    <td style="text-align:center;">25.75</td>
+  </tr>
+</table>
+
 
 
 
