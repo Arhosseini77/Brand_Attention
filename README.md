@@ -124,26 +124,12 @@ python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/t
 
 ### Result 
 
-<div style="text-align:center;">
-    <div style="display:flex; justify-content:center; align-items:center;">
-        <div style="margin-right:0.5px;">
-            <figure>
-                <img src="test_images/test_obj.jpg" alt="Input" style="width:200px; height:auto;">
-                <figcaption>Input Image</figcaption>
-            </figure>
-        </div>
-        <div style="margin-left:0.5px;">
-            <figure>
-                <img src="test_images/test_obj_bbox.png" alt="BBox" style="width:200px; height:auto;">
-                <figcaption>BBox Selected</figcaption>
-            </figure>
-        </div>
-    </div>
-    <div style="text-align:center; font-weight:bold; margin-top:10px;">
-        Attention Score: 11.23%
-    </div>
-</div>
 
+
+| Input Image                               | BBox Selected                          |
+|-------------------------------------------|-----------------------------------------|
+| ![ Input Image](test_images/test_obj.jpg) |![BBox Selected](test_images/test_obj_bbox.png)|
+| Object Attention Score:                   | 11.23%                          |
 ## Acknowledgement
 We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
 
