@@ -91,7 +91,7 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 
 <table>
   <tr>
-    <td>Original Image</td>
+    <td style="text-align:center; font-weight:bold;">Input Image</td>
   </tr>
   <tr>
     <td><img src="test_images/test.jpg" alt="Original Image"></td>
