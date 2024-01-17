@@ -94,7 +94,10 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
     <td style="text-align:center; font-weight:bold;">Input Image</td>
   </tr>
   <tr>
-    <td><img src="test_images/test.jpg" alt="Original Image"></td>
+    <td>
+      <!-- Added inline CSS for width and height. Height is auto to maintain aspect ratio. -->
+      <img src="test_images/test.jpg" alt="Original Image" style="width:300px; height:auto;">
+    </td>
   </tr>
   <tr>
     <td style="text-align:center; font-weight:bold;">Brand-Attention Score</td>
@@ -103,6 +106,7 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
     <td style="text-align:center;">25.75</td>
   </tr>
 </table>
+
 
 
 
