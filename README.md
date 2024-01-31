@@ -109,7 +109,7 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
     <td style="text-align:center; font-weight:bold;">Brand-Attention Score</td>
   </tr>
   <tr>
-    <td style="text-align:center;">25.75</td>
+    <td style="text-align:center;">23.54</td>
   </tr>
 </table>
 
@@ -132,10 +132,10 @@ python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/t
 
 
 
-| Input Image                               | BBox Selected                          |
-|-------------------------------------------|-----------------------------------------|
-| ![ Input Image](test_images/test_obj.jpg) |![BBox Selected](test_images/test_obj_bbox.png)|
-| Object Attention Score:                   | 11.23%                          |
+| Input Image                               | BBox Selected                                   |
+|-------------------------------------------|-------------------------------------------------|
+| ![ Input Image](test_images/test_obj.jpg) | ![BBox Selected](test_images/test_obj_bbox.png) |
+| Object Attention Score:                   | 11.22%                                          |
 ## Acknowledgement
 We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
 
