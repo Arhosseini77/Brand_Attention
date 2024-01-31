@@ -6,3 +6,4 @@ opencv-contrib-python==4.8.0.76
 opencv-python==4.6.0.66
 Pillow==9.3.0
 ultralytics==8.0.187
+gdown
