@@ -84,7 +84,6 @@ def saliency_map_prediction_brand(img_path , text_map_path):
 
     # Weight Path
     weight_path = "weights/ECT_SAL.pth"
-
     # load Model
     model = ECT_SAL()
     model.load_state_dict(torch.load(weight_path) , strict=False)
