@@ -21,6 +21,10 @@ cd weights
 gdown 1gGP4X_lwyd8TlxKeaYfj10mSmDPqrAeT  # Logo-Detection-Yolov8
 gdown 1fARIELdC2sfQfg2sd4eRWQnDF1tFkRiq  # ECT-SAL weights
 cd ..
+cd saliency_prediction
+mkdir pretrained_models
+cd pretrained_models
+gdown 1PDdlznKsJ8VDP4ATGY1TdxN0CJ2WnTJk  # Resnet 50 pretrained weight
 ````
 
 ## Brand-Logo Detection
