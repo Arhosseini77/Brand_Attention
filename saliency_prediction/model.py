@@ -9,7 +9,7 @@ from saliency_prediction.utils.TransformerEncoder import Encoder
 cfg1 = {
 "hidden_size" : 768,
 "mlp_dim" : 768*4,
-"num_heads" : 1,
+"num_heads" : 4,
 "num_layers" : 2,
 "attention_dropout_rate" : 0,
 "dropout_rate" : 0.1,
@@ -18,7 +18,7 @@ cfg1 = {
 cfg2 = {
 "hidden_size" : 768,
 "mlp_dim" : 768*4,
-"num_heads" : 1,
+"num_heads" : 4,
 "num_layers" : 2,
 "attention_dropout_rate" : 0.1,
 "dropout_rate" : 0.1,
@@ -27,7 +27,7 @@ cfg2 = {
 cfg3 = {
 "hidden_size" : 512,
 "mlp_dim" : 512*4,
-"num_heads" : 1,
+"num_heads" : 2,
 "num_layers" : 1,
 "attention_dropout_rate" : 0.1,
 "dropout_rate" : 0.1,
