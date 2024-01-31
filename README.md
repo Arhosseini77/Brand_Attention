@@ -25,6 +25,8 @@ cd saliency_prediction
 mkdir pretrained_models
 cd pretrained_models
 gdown 1PDdlznKsJ8VDP4ATGY1TdxN0CJ2WnTJk  # Resnet 50 pretrained weight
+cd ..
+cd ..
 ````
 
 ## Brand-Logo Detection
