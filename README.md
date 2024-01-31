@@ -19,7 +19,7 @@ Download weights:
 mkdir weights
 cd weights
 gdown 1gGP4X_lwyd8TlxKeaYfj10mSmDPqrAeT  # Logo-Detection-Yolov8
-gdown 1fARIELdC2sfQfg2sd4eRWQnDF1tFkRiq  # ECT-SAL weights
+gdown 1urHK0MGb1aaI3moogltngyALHlyuJ4lj  # ECT-SAL weights
 cd ..
 cd saliency_prediction
 mkdir pretrained_models
