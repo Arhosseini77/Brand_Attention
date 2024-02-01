@@ -96,12 +96,10 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 ### Result 
 
 
-|              Input Image              |
-|:-------------------------------------:|
-| ![ Input Image](test_images/test.jpg) | 
-|     Brand-Attention Score: 23.54      |
-
-
+|                         Input Image                          |
+|:------------------------------------------------------------:|
+| [<img src="test_images/test.jpg" width="300"/>](input image) | 
+|                 Brand-Attention Score: 23.54                 |
 
 
 ## Advertisment image object Attention
