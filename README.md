@@ -98,7 +98,7 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 
 |                  Input Image                  |
 |:---------------------------------------------:|
-| <img src="test_images/test.jpg" width="500"/> | 
+| <img src="test_images/test.jpg" width="400"/> | 
 |         Brand-Attention Score: 23.54          |
 
 
