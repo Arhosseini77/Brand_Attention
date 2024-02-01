@@ -95,12 +95,12 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 
 ### Result 
 
-<table>
+<table style="margin: 0 auto;">
   <tr>
     <td style="text-align:center; font-weight:bold;">Input Image</td>
   </tr>
   <tr>
-    <td>
+    <td style="text-align:center;">
       <!-- Added inline CSS for width and height. Height is auto to maintain aspect ratio. -->
       <img src="test_images/test.jpg" alt="Original Image" style="width:300px; height:auto;">
     </td>
@@ -133,9 +133,10 @@ python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/t
 
 
 | Input Image                               | BBox Selected                                   |
-|-------------------------------------------|-------------------------------------------------|
+|:------------------------------------------:|:------------------------------------------------:|
 | ![ Input Image](test_images/test_obj.jpg) | ![BBox Selected](test_images/test_obj_bbox.png) |
 | Object Attention Score:                   | 11.22%                                          |
+
 ## Acknowledgement
 We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
 
