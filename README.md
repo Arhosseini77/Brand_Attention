@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-  <h1 style="font-size: 48px;">Brand Attention</h1>
+  <h1 style="font-size: 60px;">Brand Attention</h1>
 
   <p>
     This repo contains the official implementation for the paper: Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Optimization
