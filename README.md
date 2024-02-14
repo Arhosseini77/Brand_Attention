@@ -1,8 +1,38 @@
-# Brand Attention
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jE0mY81mF8lO2Yh8bRo0p_J0HTeHcv6J?authuser=2#scrollTo=mcUVVkhUSXsj) | [Paper](link_to_paper) | [Project Page](https://arhosseini77.github.io)
+<br/>
+<p align="center">
+  <h3 align="center" style="font-size: 24px;">Brand Attention</h3>
+
+  <p align="center">
+    This repo contains the official implementation for the paper: Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Optimization
+    <br/>
+    <br/>
+    <a href="link_to_paper">Paper</a>
+    .
+    <a href="https://arhosseini77.github.io">Project Page</a>
+    </p>
+</p>
 
 
-![Brand-Attention Module](documentation/Brand_Attention.png)
+
+<br/>
+<div align="center">
+  <img src="https://img.shields.io/github/contributors/Arhosseini77/Brand_Attention?color=dark-green" alt="Contributors"> 
+  <img src="https://img.shields.io/github/forks/Arhosseini77/Brand_Attention?style=social" alt="Forks"> 
+  <img src="https://img.shields.io/github/stars/Arhosseini77/Brand_Attention?style=social" alt="Stargazers"> 
+  <img src="https://img.shields.io/github/license/Arhosseini77/Brand_Attention" alt="License"> 
+  <a href="https://colab.research.google.com/drive/1jE0mY81mF8lO2Yh8bRo0p_J0HTeHcv6J?authuser=2#scrollTo=mcUVVkhUSXsj">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
+  </a>
+</div>
+<br/>
+
+
+<div align="center">
+    <img src="documentation/Brand_Attention.png" alt="Brand-Attention Module" style="width: 80%;">
+</div>
+
+
+
 ## Installation
 
 Install Pytorch with :
