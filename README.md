@@ -78,7 +78,7 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 
 |             Original Image                | Brand Logo Detection Result                          |
 | ------------------------------------------------------ |-----------------------------------------|
-|  ![Original Image](test_images/test.jpg) |![Brand Logo Detection](results/test_detected_logo.png)|
+|   <img src="test_images/test.jpg" alt="Original Image" width="300"> |<img src="results/test_detected_logo.png" alt="Brand Logo Detection" width="300">|
 
 
 ## ECT-SAL
@@ -102,8 +102,7 @@ To train your dataset on the ECT-SAL model, follow the instructions provided in 
 
 |             Original Image                | Saliency Map                                  |
 | ------------------------------------------------------ |-----------------------------------------------|
-|  ![Original Image](test_images/test.jpg) | ![Saliency Map](results/test_saliencymap.png) |
-
+|  <img src="test_images/test.jpg" alt="Original Image" width="300">| <img src="results/test_saliencymap.png" alt="Saliency Map" width="300"> |
 
 
 ## Brand-Attention
