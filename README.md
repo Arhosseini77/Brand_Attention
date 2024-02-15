@@ -76,17 +76,24 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 
 ### Result
 
+
 |             Original Image                | Brand Logo Detection Result                          |
 | ------------------------------------------------------ |-----------------------------------------|
 |   <img src="test_images/test.jpg" alt="Original Image" width="300"> |<img src="results/test_detected_logo.png" alt="Brand Logo Detection" width="300">|
 
 
 ## ECT-SAL
-![ECT-SAL](documentation/ECT_SAL_Schematic.png)
+
+<div align="center">
+     <img src="documentation/ECT_SAL_Schematic.png" alt="ECT-SAL" width="900"> 
+</div>
+
 ### Description
+
 This module is designed for predicting saliency maps of images, particularly suited for use in ads and packaging. Model leverages the ECSAL dataset for training. You can find the dataset [here](https://github.com/leafy-lee/E-commercial-dataset).
 
 ### Inference
+
 * For saliency map prediction, it is essential to provide a corresponding text map. Use the DBNET++ model available [here](text_detector_module/README.md) to generate accurate text maps for improved saliency predictions.
 
 Run the script:
@@ -106,6 +113,7 @@ To train your dataset on the ECT-SAL model, follow the instructions provided in 
 
 
 ## Brand-Attention
+
 The Brand Attention Module is a component designed to assess the visibility and attention of a brand within advertisement and packaging images. It combines logo detection and saliency map prediction techniques to quantify the presence and prominence of a brand in a given image.
 
 ### Inference
@@ -123,15 +131,16 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 
 ### Result 
 
-
 |                  Input Image                  |
 |:---------------------------------------------:|
-| <img src="test_images/test.jpg" width="400"/> | 
+| <img src="test_images/test.jpg" width="300"/> | 
 |         Brand-Attention Score: 23.54          |
 
 
 ## Advertisment image object Attention
+
 This Module is a component designed to assess the visibility and attention of any object you want within advertisement and packaging images. It saliency map prediction techniques to quantify the presence and prominence of that object in a given image.
+
 ### Inference
 
 * For saliency map prediction, it is essential to provide a corresponding text map. Use the DBNET++ model available [here](text_detector_module/README.md) to generate accurate text maps for improved saliency predictions.
@@ -144,12 +153,11 @@ python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/t
 
 ### Result 
 
-
-
 |                Input Image                | BBox Selected                                   |
 |:-----------------------------------------:|:------------------------------------------------:|
-| ![ Input Image](test_images/test_obj.jpg) | ![BBox Selected](test_images/test_obj_bbox.png) |
+| <img src="test_images/test_obj.jpg" alt="Input Image" width="300"> | <img src="test_images/test_obj_bbox.png" alt="BBox Selected" width="300"> |
 |          Object Attention Score           | 11.22%                                          |
+
 
 ## Acknowledgement
 We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
