@@ -3,7 +3,7 @@
   <h1 style="font-size: 60px;">Brand Attention</h1>
 
   <p>
-    This repo contains the official implementation for the paper: Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Optimization
+    This repo contains the official implementation for the paper: Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Analysis
     <br/><br/>
     <a href="link_to_paper">Paper</a>
     .
