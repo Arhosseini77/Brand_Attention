@@ -7,7 +7,7 @@
     <br/><br/>
     <a href="http://arxiv.org/abs/2403.02336">Paper</a>
     .
-    <a href="https://arhosseini77.github.io">Project Page</a>
+    <a href="https://arhosseini77.github.io/BrandAttention_page">Project Page</a>
     .
     <a href="mailto:arhosseini77@ut.ac.ir">Dataset</a>
   </p>
