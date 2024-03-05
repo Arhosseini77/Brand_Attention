@@ -139,7 +139,7 @@ python main_brand_attention.py --img_path path/to/input_image.jpg --tmap path/to
 |         Brand-Attention Score: 23.54          |
 
 
-## Advertisment image object Attention
+## Advertisement image object Attention
 
 This Module is a component designed to assess the visibility and attention of any object you want within advertisement and packaging images. It saliency map prediction techniques to quantify the presence and prominence of that object in a given image.
 
