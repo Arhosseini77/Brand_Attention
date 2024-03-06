@@ -161,7 +161,7 @@ python main_object_attention.py --img_path path/to/input_image.jpg --tmap path/t
 
 
 ## Acknowledgement
-We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET++](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
+We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNET](https://github.com/xuannianz/DifferentiableBinarization), [Efficient-Attention](https://github.com/cmsflash/efficient-attention) for their code repositories.
 
 
 ## Citation
