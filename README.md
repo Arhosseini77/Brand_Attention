@@ -48,13 +48,13 @@ Download weights:
 ````
 mkdir weights
 cd weights
-gdown 1gGP4X_lwyd8TlxKeaYfj10mSmDPqrAeT  # Logo-Detection-Yolov8
-gdown 1urHK0MGb1aaI3moogltngyALHlyuJ4lj  # ECT-SAL weights
+gdown 1p6LyrHIAYbz5M94eBTTOcduWF-TzeQ1D # Logo-Detection-Yolov8
+gdown 1_0iA_pmC4-IvA7IaRuiJ-QHnRheIEmBe  # ECT-SAL weights
 cd ..
 cd saliency_prediction
 mkdir pretrained_models
 cd pretrained_models
-gdown 1PDdlznKsJ8VDP4ATGY1TdxN0CJ2WnTJk  # Resnet 50 pretrained weight
+gdown 1C9TgPQvFQHJP3byDtBL5X56cXeOl4JE2  # Resnet 50 pretrained weight
 cd ..
 cd ..
 ````
