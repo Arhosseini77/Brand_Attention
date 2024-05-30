@@ -24,7 +24,7 @@ pip install h5py==2.10.0
 
 * Download Weights
 ```python
-gdown 1esUCA8JGrZYNIWI1ZvNiistDpZmElttq
+gdown 1_vuZs6vEKl1VmwHUDdfP9ZRgL-C0t21I
 ```
 
 * Inference
