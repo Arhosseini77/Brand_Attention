@@ -85,6 +85,9 @@ python main_detection_yolov8.py --model="weights/Logo_Detection_Yolov8.pt" --ima
 
 ## ECT-SAL
 
+<div align="center">
+     <img src="documentation/ECT_SAL_Schematic.png" alt="ECT-SAL" width="900"> 
+</div>
 
 
 ### Description
