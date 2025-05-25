@@ -5,7 +5,9 @@
   <p>
     This repo contains the official implementation for the paper: Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Analysis
     <br/><br/>
-    <a href="http://arxiv.org/abs/2403.02336">Paper</a>
+    <a href="https://link.springer.com/article/10.1007/s42452-025-07043-9">Paper</a>
+    .
+    <a href="http://arxiv.org/abs/2403.02336">Arxiv</a>
     .
     <a href="https://arhosseini77.github.io/BrandAttention_page">Project Page</a>
     .
